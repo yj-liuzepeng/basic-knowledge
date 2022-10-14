@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>水平居中写法</title>
+  <style>
+    /* 1. flex实现  子元素宽高可以设置，也可以不设置 */
+    /* .app {
+      width: 500px;
+      height: 500px;
+      background: greenyellow;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .app>div {
+      width: 100px;
+      height: 100px;
+      font-size: 20px;
+      background: blueviolet;
+    } */
+
+    /* 2. 子绝父相 定位实现 子元素宽度高度需要设置*/
+    /* .app {
+      width: 500px;
+      height: 500px;
+      background: greenyellow;
+      position: relative;
+
+    }
+
+    .app>div {
+      width: 100px;
+      height: 100px;
+      font-size: 20px;
+      background: blueviolet;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+    } */
+
+    /* 3. 子绝父相 定位实现 子元素宽高可以设置，也可以不设置 */
+    /* .app {
+      width: 500px;
+      height: 500px;
+      background: greenyellow;
+      position: relative;
+
+    }
+
+    .app>div {
+      width: 100px;
+      height: 100px;
+      font-size: 20px;
+      background: blueviolet;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    } */
+    /* 4. line-height 和 text-align 实现，但是子盒子必须是 inline 元素 */
+    /* .app {
+      width: 500px;
+      height: 500px;
+      background: greenyellow;
+      line-height: 500px;
+      text-align: center;
+
+    }
+
+    .app>div {
+      display: inline;
+      font-size: 20px;
+      background: blueviolet;
+    } */
+    /* 5. 水平方向 margin: auto ,垂直方向上  position: relative 相对定位，子元素高可以设置，也可以不设置 */
+    .app {
+      width: 500px;
+      height: 500px;
+      background: greenyellow;
+    }
+
+    .app>div {
+      width: 100px;
+      margin: 0 auto;
+      font-size: 20px;
+      background: blueviolet;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="app">
+    <div>这个盒子居中</div>
+  </div>
+</body>
+
+</html>

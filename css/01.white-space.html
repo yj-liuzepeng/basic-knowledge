@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 200px;
+      height: 300px;
+      border: 1px solid #ccc;
+      /* normal: 默认，多个空格和多个换行只会渲染出一个空格 */
+      /* pre: 空白和换行（\n）会被浏览器保留，每个空格和换行都会被渲染出来，但是超出了宽度时，没有\n不会自动换行 */
+      /* nowrap: 文本不会换行，如果需要设置超出一行显示省略号则需要设置为nowrap */
+      /* pre-wrap: 	每个换行都会被渲染，并且每个空格都会被渲染出来，超出宽度会自动换行。常用 */
+      /* pre-line: 每个换行都会被渲染，但多个空格只会渲染出一个空格，超出宽度会自动换行。常用 */
+      /* inherit: 从父级继承，white-space属性默认会继承自父级的，几乎用不到这个属性 */
+      /* 参考： https://juejin.cn/post/7108717658794623012 */
+      white-space: pre-line;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    你好，我来用一下            white-space这个属性；你好，我来用一下white-space这个属性；你好，我来用一下white-space这个属性；你好，我来用一下white-space这个属性；
+  </div>
+</body>
+</html>
